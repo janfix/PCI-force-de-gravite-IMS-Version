@@ -86,9 +86,10 @@ define([
         getResponse: function() {
 
             var $container = $(this.dom),
-                value = parseInt($container.find('input:checked').val()) || 0;
-
-            return { base: { integer: value } };
+            value = $container.find('.answforce').text();
+            value = value.slice(0, -1);
+            
+            return { base: { string: value } };
         },
         /**
          * Reverse operation performed by render()
