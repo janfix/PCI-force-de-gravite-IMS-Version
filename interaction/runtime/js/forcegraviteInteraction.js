@@ -85,9 +85,17 @@ define([
          */
         getResponse: function() {
 
-            var $container = $(this.dom),
-            value = $container.find('.answforce').text();
-            value = value.slice(0, -1);
+            var $container = $(this.dom);
+            var Terre = {};
+            Terre.balance = $container.find('.Terre_balanceAsw').text();
+            Terre.dynamo = $container.find('.Terre_dynamoAsw').text();
+            var Lune = {}
+            Lune.balance = $container.find('.Lune_balanceAsw').text();
+            Lune.dynamo = $container.find('.Lune_dynamoAsw').text();
+            var Mars = {}
+            Mars.balance = $container.find('.Mars_balanceAsw').text();
+            Mars.dynamo = $container.find('.Mars_dynamoAsw').text();
+            var value = '{"Terre":' + JSON.stringify(Terre) + ',"Lune":' + JSON.stringify(Lune) + ',"Mars":' + JSON.stringify(Mars) + '}';
             
             return { base: { string: value } };
         },

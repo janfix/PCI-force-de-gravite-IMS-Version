@@ -25,6 +25,16 @@
         </div>
     </div>
 
-    <div class="answforce">&nbsp;</div>
+    <div class="answforce">
+        <div class="Terre_balanceAsw">false</div>
+        <div class="Terre_dynamoAsw">false</div>
+
+        <div class="Lune_balanceAsw">false</div>
+        <div class="Lune_dynamoAsw">false</div>
+
+        <div class="Mars_balanceAsw">false</div>
+        <div class="Mars_dynamoAsw">false</div>
+
+    </div>
 </div>
 </div>

@@ -206,10 +206,16 @@ define(['taoQtiItem/portableLib/jquery_2_1_1',
                         var cible = String($container.find(target).attr("name"));
 
                         if (cible == "balGauche") {
-                            if (answbal == "not-use") {
-                                $container.find(".answforce").append(" balance-ok,");
-                                answbal = "bal-ok";
-                            }
+                                if(astro == "terre" || astro == "start"){
+                                    $container.find(".Terre_balanceAsw").html('true');                               
+                                }
+                                if (astro == "lune") {
+                                    $container.find(".Lune_balanceAsw").html('true');
+                                }
+                                if (astro == "mars") {
+                                    $container.find(".Mars_balanceAsw").html('true');
+                                }
+                                
                             $container.find(".dynamo").css("top", "0px");
                             $poids40kg.show();
                             $container.find(".txtmass").show();
@@ -219,25 +225,29 @@ define(['taoQtiItem/portableLib/jquery_2_1_1',
                             $gravterre.hide();
                         }
                         if (cible == "dynamo") {
-                            if (answdyna == "not-use") {
-                                $container.find(".answforce").append(" dynamo-ok,");
-                                answdyna = "dyna-ok";
+                            if (astro == "terre" || astro == "start") {
+                                $container.find(".Terre_dynamoAsw").html('true');
+                            }
+                            if (astro == "lune") {
+                                $container.find(".Lune_dynamoAsw").html('true');
+                            }
+                            if (astro == "mars") {
+                                $container.find(".Mars_dynamoAsw").html('true');
                             }
                             $poids40kg.hide();
                             $container.find(".txtmass").hide();
 
                             if (astro == "start") {
-                                console.log("START")
                                 $zerograv.hide();
                                 $gravlune.hide();
                                 $gravmars.hide();
                                 $gravterre.show();
                                 $container.find(this).css("top", "100px");
 
+
                             }
                             
                             if (astro == "terre") {
-                                console.log("TERRE")
                                 $zerograv.hide();
                                 $gravlune.hide();
                                 $gravmars.hide();
