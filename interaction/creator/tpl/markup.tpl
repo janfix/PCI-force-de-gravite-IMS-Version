@@ -18,7 +18,7 @@
             </div>
 
             <div name="balGauche" class="dropper balGauche">
-                <span class='txtmass'>Masse mesurée : 40 kg</span>
+                <span class='txtmass'></span>
             </div>
 
             <div name="dynamo" class="dropper dynamo">&nbsp;</div>

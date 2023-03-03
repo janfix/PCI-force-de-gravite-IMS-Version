@@ -70,7 +70,7 @@ define(['taoQtiItem/portableLib/jquery_2_1_1',
             $container.find(".socle").remove();
             $labo.append("<div name='socle' class='dropper socle'></div>");
             $labo.append("<div name='dynamo' class='dropper dynamo'></div>");
-            $labo.append("<div name='balGauche' class='dropper balGauche'><span class='txtmass'>Masse mesurée : 40 kg</span></div>");
+            $labo.append("<div name='balGauche' class='dropper balGauche'><span class='txtmass'> </span></div>");
             $container.find(".socle").append("<div class='draggable meteor'></div>");
 
             draganddroper();
@@ -99,7 +99,7 @@ define(['taoQtiItem/portableLib/jquery_2_1_1',
             $container.find(".socle").remove();
             $labo.append("<div name='socle' class='dropper socle'></div>");
             $labo.append("<div name='dynamo' class='dropper dynamo'></div>");
-            $labo.append("<div name='balGauche' class='dropper balGauche'><span class='txtmass'>Masse mesurée : 40 kg</span></div>");
+            $labo.append("<div name='balGauche' class='dropper balGauche'><span class='txtmass'> </span></div>");
             $container.find(".socle").append("<div class='draggable meteor'></div>");
 
             draganddroper();
@@ -127,7 +127,7 @@ define(['taoQtiItem/portableLib/jquery_2_1_1',
             $container.find(".socle").remove();
             $labo.append("<div name='socle' class='dropper socle'></div>");
             $labo.append("<div name='dynamo' class='dropper dynamo'></div>");
-            $labo.append("<div name='balGauche' class='dropper balGauche'><span class='txtmass'>Masse mesurée : 40 kg</span></div>");
+            $labo.append("<div name='balGauche' class='dropper balGauche'><span class='txtmass'> </span></div>");
             $container.find(".socle").append("<div class='draggable meteor'></div>");
 
             draganddroper();
@@ -223,6 +223,10 @@ define(['taoQtiItem/portableLib/jquery_2_1_1',
                             $gravlune.hide();
                             $gravmars.hide();
                             $gravterre.hide();
+
+                            if(astro == "start"){
+                                $(this).css("margin-top","-207px")
+                            }
                         }
                         if (cible == "dynamo") {
                             if (astro == "terre" || astro == "start") {
